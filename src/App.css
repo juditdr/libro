@@ -1,38 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+
+body {
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.book-cover {
   min-height: 100vh;
+  min-width: 90vw;
+  padding: 10px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(179, 179, 179, 0.3);
+}
+
+.main-title {
+  width: 60vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40vh;
+  color: white;
+  font-weight: 600;
+  font-size: 3.4375rem;
+  font-family: "Roboto";
+}
+
+.opinions {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  /* background-color: white; */
+}
+
+.section-title {
+  text-align: center;
+  margin: 2em auto 2em auto;
+  color: black;
+  font-weight: 400;
+  font-size: 3.4375rem;
+  font-family: "Roboto";
+}
+
+.opinions-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.opinion {
+  flex-grow: 1;
+  margin-bottom: 25px;
+  flex: 1 0 calc(33.333% - 20px);
+}
+
+.opinion .text {
+  text-align: center;
+  width: 400px;
+  margin: auto auto 25px auto;
+  font-family: Merriweather, Georgia, serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.opinion .description {
+  text-align: center;
+  color: #a4a4a4;
+}
+
+.opinion .name {
+  text-align: center;
+  font-weight: 600;
+}
+
+.opinion img {
+  vertical-align: bottom;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  left: 50% !important;
+  top: 50% !important;
+}
+
+.text-book-img {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40vh;
+  min-width: 90vw;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-color: black;
+  box-shadow: inset 0 0 0 2000px rgba(179, 179, 179, 0.6);
+  padding-bottom: 2em;
+}
+
+.text-book {
+  position: relative;
+  vertical-align: middle;
+  font-family: Merriweather, Georgia, serif;
+  line-height: 1.5em;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  width: 60vw;
+}
+
+.author-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.author-img {
+  padding-bottom: 2em;
+}
+
+.author-text {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 100;
+  text-align: justify;
+  vertical-align: top;
+  padding: 0 50px 50px 50px;
+  font-size: 1em;
+}
+
+.buy {
+  margin-bottom: 2em;
+  background-color: #e8bfa2;
+}
+
+.buy-btn {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.buy-btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn-text {
+  color: #0e437b;
+  font-weight: bold;
+  font-size: 1em;
+  vertical-align: middle;
+  font-family: Merriweather, Georgia, serif;
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+.buy-btn-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+footer {
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #a4a4a4;
+  height: 100vh;
+}
+
+.thanks-img {
+  border-radius: 5px 5px 5px 5px;
+  animation: float 6s ease-in-out infinite;
+  width: 250px;
+}
+
+.thanks-text {
+  position: relative;
+  vertical-align: middle;
+  font-family: Merriweather, Georgia, serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 100;
+  font-style: italic;
   color: white;
+  width: 90vw;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .text-book-img {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 40vh;
+    min-width: 90vw;
+    padding: 50px;
+  }
+
+  .text-book {
+    position: relative;
+    vertical-align: middle;
+    border-left: 0.2em solid #ffffff;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+    width: 60vw;
+  }
+
+  .buy-btn {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 350px;
+    height: 550px;
+    background-color: white;
+    animation: float 6s ease-in-out infinite;
+    cursor: pointer;
+  }
+
+  .buy-btn-text {
+    font-weight: bolder;
+    font-size: 2em;
+    margin-top: 5px;
+  }
+
+  .author-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+
+  .author-text {
+    font-family: Merriweather, Georgia, serif;
+    font-weight: 100;
+    text-align: justify;
+    font-size: 1em;
+  }
+
+  .thanks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 90vw;
+  }
+
+  .thanks-img {
+    border-radius: 5px 5px 5px 5px;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .thanks-text {
+    position: relative;
+    vertical-align: middle;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+    width: 60vw;
   }
 }
