@@ -41,7 +41,7 @@ function App() {
         </Route>
         <Route path="/">
           <div className="App">
-            <section className="book-cover" style={{ backgroundImage: "url(/images/book.jpeg)" }}>
+            <section className="book-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/book.jpeg)` }}>
               <p className="main-title">
                 PREFIERO ECHARTE DE MENOS A NO HABERTE CONOCIDO
               </p>
@@ -71,7 +71,7 @@ function App() {
                 </span>
               </div>
             </section>
-            <section className="text-book-img" style={{ backgroundImage: "url(/images/text.png)" }}>
+            <section className="text-book-img" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/text.png)` }}>
               <div className="buy-btn" role="link" onClick={handleClick}>
                 <img className="buy-btn-img" src={`${process.env.PUBLIC_URL}/images/cover.jpg`}/>
                 <span className="buy-btn-text">
