@@ -28,8 +28,8 @@ function App() {
         quantity: 1,
       }],
       mode: 'payment',
-      successUrl: 'https://example.com/success',
-      cancelUrl: 'https://example.com/cancel',
+      successUrl: 'https://juditdr.github.io/libro/thanks',
+      cancelUrl: 'https://juditdr.github.io/libro/',
     });
   };
 
