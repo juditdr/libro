@@ -23,8 +23,6 @@ export default class MyForm extends React.Component {
 
                 <input type="text" name="name" required placeholder="Nombre"/>
 
-                <textarea type="text" name="message" rows="4" cols="30" required placeholder="Escribe aquí tu mensaje"/>
-
                 <button>Enviar</button>
             </form>
         ) : null}
