@@ -4,10 +4,9 @@ import {Opinions} from './components/opinions';
 import Thanks from './components/thanks';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import {loadStripe} from '@stripe/stripe-js';
@@ -28,7 +27,7 @@ function App() {
         quantity: 1,
       }],
       mode: 'payment',
-      successUrl: 'https://juditdr.github.io/libro/thanks',
+      successUrl: 'https://juditdr.github.io/libro/#/thanks',
       cancelUrl: 'https://juditdr.github.io/libro/',
       shippingAddressCollection: {
         allowedCountries: ['ES'],
