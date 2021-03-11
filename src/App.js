@@ -27,10 +27,12 @@ function App() {
         price: 'price_1ISLGmIo9LMmf0BWXFBPCRO0',
         quantity: 1,
       }],
-      billingAddressCollection: 'required',
       mode: 'payment',
       successUrl: 'https://juditdr.github.io/libro/thanks',
       cancelUrl: 'https://juditdr.github.io/libro/',
+      shippingAddressCollection: {
+        allowedCountries: ['ES'],
+      }
     });
   };
 
