@@ -74,7 +74,7 @@ function App() {
               </div>
             </section>
             <section className="text-book-img" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/text.png)` }}>
-              <div className="buy-btn" role="link" onClick={handleClick}>
+              <div className="buy-btn" role="link">
               {/* <div className="buy-btn" role="link" onClick={handleClick}> */}
                 <img className="buy-btn-img" src={`${process.env.PUBLIC_URL}/images/cover.jpg`}/>
                 <span className="buy-btn-text">
